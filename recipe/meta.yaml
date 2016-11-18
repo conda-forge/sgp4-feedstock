@@ -18,7 +18,6 @@ source:
     - tests.patch
 
 build:
-#  skip: true  # [win64]
   number: 1
   script: python setup.py install
 
