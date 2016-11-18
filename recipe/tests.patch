@@ -1,5 +1,5 @@
 diff --git a/sgp4/tests.py b/sgp4/tests.py
-index 618f786..f2ef91a 100644
+index 618f786..582a104 100644
 --- a/sgp4/tests.py
 +++ b/sgp4/tests.py
 @@ -10,6 +10,7 @@ import re
@@ -10,16 +10,19 @@ index 618f786..f2ef91a 100644
  
  from sgp4.earth_gravity import wgs72
  from sgp4.ext import invjday, newtonnu, rv2coe
-@@ -112,10 +113,10 @@ class Tests(TestCase):
+@@ -112,11 +113,11 @@ class Tests(TestCase):
          # Exercise the newtonnu() code path with asinh() to see whether
          # we can replace it with the one from Python's math module.
  
 -        self.assertEqual(newtonnu(1.0, 2.9),   # parabolic
+-                         (8.238092752965605, 194.60069989482898))
 +        np.testing.assert_allclose(newtonnu(1.0, 2.9),   # parabolic
-                          (8.238092752965605, 194.60069989482898))
++                         (8.238092752965605, 194.60069989482898), rtol=1e-15)
  
 -        self.assertEqual(newtonnu(1.1, 2.7),   # hyperbolic
+-                         (4.262200676156417, 34.76134082028372))
 +        np.testing.assert_allclose(newtonnu(1.1, 2.7),   # hyperbolic
-                          (4.262200676156417, 34.76134082028372))
++                         (4.262200676156417, 34.76134082028372), rtol=1e-15)
  
      def test_good_tle_checksum(self):
+         for line, expected in (good1, 3), (good2, 7):
