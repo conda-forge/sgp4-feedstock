@@ -15,10 +15,11 @@ source:
   sha256: {{ sha256 }}
   patches:
     - manifest.patch
+    - tests.patch
 
 build:
-  skip: true  # [win64]
-  number: 0
+#  skip: true  # [win64]
+  number: 1
   script: python setup.py install
 
 requirements:
@@ -28,6 +29,8 @@ requirements:
     - python
 
 test:
+  requires:
+    - numpy
   imports:
     - sgp4
     - sgp4.tests
