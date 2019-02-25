@@ -1,8 +1,6 @@
 {% set name = "sgp4" %}
 {% set version = "1.4" %}
-{% set gh_org = "brandon-rhodes" %}
-{% set gh_repo = "python-sgp4" %}
-{% set sha256 = "a7e03a714de969e2ad980830957793d677681b40047d7d052a50fe9e96e6ab7c" %}
+{% set sha256 = "1fb3cdbc11981a9ff34a032169f83c1f4a2877d1b6c295aed044e1d890b73892" %}
 
 
 package:
@@ -11,7 +9,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/{{ gh_org }}/{{ gh_repo }}/archive/v{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
   patches:
     - manifest.patch
