@@ -10,7 +10,7 @@ package:
   version: {{ version }}
 
 source:
-  fn: v{{ version }}.tar.gz
+  fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/{{ gh_org }}/{{ gh_repo }}/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
   patches:
