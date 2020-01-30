@@ -1,8 +1,8 @@
 {% set name = "sgp4" %}
-{% set version = "1.4" %}
+{% set version = "2.0" %}
 {% set gh_org = "brandon-rhodes" %}
 {% set gh_repo = "python-sgp4" %}
-{% set sha256 = "a7e03a714de969e2ad980830957793d677681b40047d7d052a50fe9e96e6ab7c" %}
+{% set sha256 = "c6aab698e99a383bda8ae9b9a727caa483da5d3b2e33f15de62851ffb4f9334a" %}
 
 
 package:
@@ -19,8 +19,8 @@ source:
 
 build:
   noarch: python
-  number: 3
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
