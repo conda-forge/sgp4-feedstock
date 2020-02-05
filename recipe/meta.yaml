@@ -1,6 +1,6 @@
 {% set name = "sgp4" %}
-{% set version = "2.2" %}
-{% set sha256 = "0393dd1e607a19d32db14a40b86ec73d792a7ccdc485837855eed85beefe15ac" %}
+{% set version = "2.3" %}
+{% set sha256 = "e6820bf43d598561bc15283076b9b3b358c22767cf3269d81dfbefc65d61b12f" %}
 
 
 package:
@@ -14,7 +14,7 @@ source:
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
