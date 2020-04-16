@@ -1,6 +1,6 @@
 {% set name = "sgp4" %}
-{% set version = "2.3" %}
-{% set sha256 = "e6820bf43d598561bc15283076b9b3b358c22767cf3269d81dfbefc65d61b12f" %}
+{% set version = "2.5" %}
+{% set sha256 = "f37528c1a712a550ce886996b895f685441068792fd5bee4e5ad1f54af173dfb" %}
 
 
 package:
@@ -17,6 +17,8 @@ build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
+  build:
+    - {{ compiler('cxx') }}
   host:
     - pip
     - python
@@ -36,7 +38,7 @@ about:
   home: https://github.com/brandon-rhodes/python-sgp4
   license: MIT
   license_file: {{ environ.RECIPE_DIR }}/LICENSE
-  summary: 'Python implementation of most recent version of the SGP4 satellite tracking algorithm.'
+  summary: Python implementation of most recent version of the SGP4 satellite tracking algorithm.
 
   description: |
     Python implementation of most recent version
