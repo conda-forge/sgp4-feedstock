@@ -1,7 +1,7 @@
-diff --git a/tests.py b/tests.py
+diff --git a/sgp4/tests.py b/sgp4/tests.py
 index 9b65c16..b03b30e 100644
---- a/tests.py
-+++ b/tests.py
+--- a/sgp4/tests.py
++++ b/sgp4/tests.py
 @@ -6,6 +6,7 @@ except:
      from unittest import TestCase, main
  
