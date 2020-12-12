@@ -1,6 +1,6 @@
 {% set name = "sgp4" %}
-{% set version = "2.10" %}
-{% set sha256 = "9612fa391a9ea91b0a40fcb69cca3707cb333cbab0aa5c1c176ed0dc4994a66b" %}
+{% set version = "2.13" %}
+{% set sha256 = "3acdbbb5de380b587c66fc59e26e635668c74661da1b731007aece8506d1e279" %}
 
 
 package:
@@ -14,7 +14,7 @@ source:
     - test-precission.patch
 
 build:
-  number: 3
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
