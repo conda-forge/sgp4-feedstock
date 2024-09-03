@@ -23,6 +23,7 @@ requirements:
     - {{ stdlib("c") }}
   host:
     - pip
+    - setuptools
     - python * *_cpython
   run:
     - python * *_cpython
