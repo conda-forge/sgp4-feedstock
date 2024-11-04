@@ -10,6 +10,3 @@ numpy:
 - '1.22'
 target_platform:
 - win-64
-zip_keys:
-- - numpy
-  - channel_sources
