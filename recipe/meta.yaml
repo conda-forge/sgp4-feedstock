@@ -8,11 +8,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/s/sgp4/sgp4-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/s/sgp4/sgp4-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -20,8 +20,10 @@ requirements:
     - python * *_cpython                     # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
   host:
     - pip
+    - setuptools
     - python * *_cpython
   run:
     - python * *_cpython
