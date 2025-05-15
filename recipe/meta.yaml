@@ -30,7 +30,7 @@ requirements:
 
 test:
   requires:
-    - numpy
+    - numpy *
   imports:
     - sgp4
     - sgp4.tests
