@@ -12,25 +12,25 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
-    - python * *_cpython                     # [build_platform != target_platform]
+    - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('cxx') }}
     - {{ stdlib("c") }}
   host:
     - pip
     - setuptools
-    - python * *_cpython
+    - python
   run:
-    - python * *_cpython
+    - python
 
 test:
   requires:
-    - numpy
+    - numpy *
   imports:
     - sgp4
     - sgp4.tests
