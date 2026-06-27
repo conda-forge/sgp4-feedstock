@@ -1,6 +1,6 @@
 {% set name = "sgp4" %}
-{% set version = "2.25" %}
-{% set sha256 = "e19edc6dcc25d69fb8fde0a267b8f0c44d7e915c7bcbeacf5d3a8b595baf0674" %}
+{% set version = "2.26" %}
+{% set sha256 = "48d15763b6af9393fc2024190705588dd3650fcd90133ab980e00bc5607c606e" %}
 
 
 package:
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
