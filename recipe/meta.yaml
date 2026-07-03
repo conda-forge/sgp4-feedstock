@@ -1,6 +1,6 @@
 {% set name = "sgp4" %}
-{% set version = "2.26" %}
-{% set sha256 = "48d15763b6af9393fc2024190705588dd3650fcd90133ab980e00bc5607c606e" %}
+{% set version = "2.27" %}
+{% set sha256 = "06d37247c6985739b707b8b39b6b83e06e8af783b2531e31965501ba983985f9" %}
 
 
 package:
